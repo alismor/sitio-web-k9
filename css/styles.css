@@ -428,6 +428,16 @@ button.next { right: 10px; }
 }
 
 /* ==== HEADER OCULTO AL SCROLL ==== */
-body.hide-header header {
-    top: -100px;
+
+.hide-header header {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
 }
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
