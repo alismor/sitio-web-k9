@@ -73,4 +73,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScroll) {
+    document.body.classList.add('hide-header');
+  } else {
+    document.body.classList.remove('hide-header');
+  }
+  lastScroll = currentScroll;
+});
+
 }); 
