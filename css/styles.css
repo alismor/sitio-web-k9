@@ -11,43 +11,51 @@ body {
     text-align: center;
 }
 
-/* ==== HEADER Y NAV MEJORADO ==== */
+/* ==== HEADER Y NAV ==== */
 header {
-    background: #222;
+    background: #333;
     color: white;
-    padding: 12px 20px;
-    box-shadow: 0 4px 12px rgba(0, 68, 255, 0.6);
-    border-radius: 0 0 12px 12px;
-    position: sticky;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    box-shadow: 2px 2px 10px rgba(0, 68, 255, 0.712);
+    border-radius: 8px;
+    position: fixed;
     top: 0;
-    z-index: 999;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
 nav a {
+    margin: 10px;
+    padding: 8px 12px;
     color: white;
     text-decoration: none;
     font-size: 16px;
-    padding: 8px 14px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 6px;
+    transition: background-color 0.3s;
 }
 
-nav a:hover,
-nav a:focus {
-    background-color: #0077ff;
-    transform: scale(1.1);
-    color: #fff;
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* ==== VIDEOS ==== */
+/* ==== CONTAINER GENERAL ==== */
+.container {
+    padding: 20px;
+    padding-top: 80px; /* Espacio por header fijo */
+}
+
+/* ==== SECCIÓN VIDEOS ==== */
 .videos-container {
     display: flex;
     flex-wrap: wrap;
@@ -83,23 +91,21 @@ nav a:focus {
 .fullscreen-btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 16px;
-    background: linear-gradient(to right, #0077ff, #004bbd);
+    padding: 8px 12px;
+    background-color: #005eff;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 94, 255, 0.6);
 }
 
 .fullscreen-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7);
+    background-color: #003fbb;
+    box-shadow: 0 0 15px rgba(0, 94, 255, 0.9);
 }
-
 
 /* ==== CONTACTO ==== */
 .contacto {
@@ -395,7 +401,6 @@ button.next { right: 10px; }
         margin-bottom: 40px;
     }
 
-    /* Ajustes de imágenes para móviles y tablets */
     .card img,
     .card-venta img,
     .training-card img,
@@ -420,4 +425,9 @@ button.next { right: 10px; }
         max-height: 200px;
         object-fit: contain;
     }
+}
+
+/* ==== HEADER OCULTO AL SCROLL ==== */
+body.hide-header header {
+    top: -100px;
 }
