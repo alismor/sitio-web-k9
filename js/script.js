@@ -83,17 +83,4 @@ window.addEventListener('scroll', () => {
   }
   lastScroll = currentScroll;
 });
-
-// Menú hamburguesa
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.getElementById('nav');
-
-  if (hamburger && nav) {
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('show');
-    });
-  }
-});
-
 }); 
