@@ -83,12 +83,17 @@ window.addEventListener('scroll', () => {
   }
   lastScroll = currentScroll;
 });
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
 
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('show');
+// Menú hamburguesa
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+
+  if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  }
 });
-
 
 }); 
