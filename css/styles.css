@@ -12,42 +12,80 @@ body {
 }
 
 /* ==== HEADER Y NAV ==== */
+/* Estilo general del header */
 header {
     background: #333;
     color: white;
-    padding: 10px 15px;
-    flex-wrap: wrap;
-    box-shadow: 2px 2px 10px rgba(0, 68, 255, 0.712);
-    border-radius: 8px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: top 0.3s;
-}
-
-nav {
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 68, 255, 0.712);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-nav a {
-    margin: 10px;
-    padding: 8px 12px;
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    border-radius: 6px;
-    transition: background-color 0.3s;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.nav-links a:hover {
+    color: #25d366;
 }
+
+/* Estilo para la hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #333;
+        padding: 10px 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
 
 /* ==== CONTAINER GENERAL ==== */
 .container {
