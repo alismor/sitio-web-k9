@@ -74,21 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 let lastScroll = 0;
-const header = document.querySelector("header");
-const scrollThreshold = 10; // Umbral mínimo para evitar parpadeo
-
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-
-    if (Math.abs(currentScroll - lastScroll) <= scrollThreshold) {
-        return; // Ignora movimientos pequeños
-    }
-
-    if (currentScroll > lastScroll && currentScroll > header.offsetHeight) {
-        document.body.classList.add("hide-header");
-    } else {
-        document.body.classList.remove("hide-header");
-    }
-
-    lastScroll = currentScroll;
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScroll) {
+    document.body.classList.add('hide-header');
+  } else {
+    document.body.classList.remove('hide-header');
+  }
+  lastScroll = currentScroll;
 });
+}); 
