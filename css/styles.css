@@ -8,10 +8,9 @@ body {
     margin: 0;
     background-color: #f4f4f4;
     text-align: center;
-    padding-top: 80px; /* Ajusta el espacio según el tamaño de tu header */
-    min-height: 100vh; /* Asegura que la altura del body sea al menos de la altura de la pantalla */
-    overflow-x: hidden; /* Para evitar el desbordamiento horizontal, en caso de que sea necesario */
-
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Ya no necesitas padding-top si el header no está fijo */
 }
 
 /* ==== HEADER Y NAV ==== */
@@ -24,12 +23,10 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 15px rgba(0, 68, 255, 0.6);
-    top: 0;
     z-index: 999;
     transition: all 0.3s ease;
+    /* position y top eliminados */
 }
-
-
 header h1 {
     font-size: 24px;
     margin: 0;
@@ -62,7 +59,7 @@ nav a:hover {
 /* ==== CONTAINER GENERAL ==== */
 .container {
     padding: 20px;
-    padding-top: 80px; /* Espacio por header fijo */
+   
 }
 
 
