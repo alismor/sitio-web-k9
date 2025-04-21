@@ -1,23 +1,18 @@
-/* Reset básico */
+/* ==== RESET GLOBAL ==== */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     text-align: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-    /* Elimina este si lo tenías: */
-    /* padding-top: 80px; */
 }
 
+/* ==== HEADER Y NAV ==== */
 header {
-    position: sticky; /* Fija el header en la parte superior */
-    top: 0;
     background: linear-gradient(135deg, #005eff, #003fbb);
     color: white;
     padding: 10px 20px;
@@ -26,9 +21,12 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 15px rgba(0, 68, 255, 0.6);
+    position: sticky;
+    top: 0;
     z-index: 999;
     transition: all 0.3s ease;
 }
+
 header h1 {
     font-size: 24px;
     margin: 0;
