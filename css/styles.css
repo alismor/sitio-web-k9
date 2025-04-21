@@ -396,50 +396,61 @@ button.next { right: 10px; }
 
 /* ==== MEDIA QUERIES ==== */
 
-/* 📱 TABLETS Y CELULARES (≤ 768px) */
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 10px;
-        gap: 15px;
-        background-color: #333; /* o el fondo que estés usando */
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 22px;
-        color: white;
-        margin: 0;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        align-items: center;
-    }
-
-    nav a {
-        font-size: 16px;
-        color: white;
-        text-decoration: none;
-        padding: 8px 12px;
-        background-color: #555;
-        border-radius: 5px;
-        width: 80%;
-        text-align: center;
-    }
-
-    nav a:hover {
-        background-color: #777;
+/* ==== MEDIA QUERIES ==== */
+@media (max-width: 1024px) {
+    .video-card,
+    .card,
+    .card-venta,
+    .training-card,
+    .gallery-item {
+        width: 90%;
+        margin: auto;
     }
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #333; /* o el color que estés usando */
+    text-align: center;
+    gap: 10px;
+}
 
-    .gallery {
+header h1 {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+    padding: 0 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+nav a {
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #666;
+}
+
+.gallery {
         flex-direction: column;
         align-items: center;
     }
@@ -453,56 +464,30 @@ button.next { right: 10px; }
         margin-bottom: 40px;
     }
 
-    .info .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /* Ajustes de imágenes para móviles y tablets */
     .card img,
     .card-venta img,
     .training-card img,
     .gallery-item img {
         height: auto;
         max-height: 220px;
-        object-fit: contain;
-    }
-
-    .video-card {
-        width: 90%;
-    }
-
-    .video-card video {
-        max-height: 220px;
-        object-fit: contain;
+        object-fit: cover;
     }
 }
 
-/* 📱 CELULARES PEQUEÑOS (≤ 480px) */
 @media (max-width: 480px) {
-    .training-card img,
+    .training-card img {
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
     .card img,
     .card-venta img,
     .gallery-item img {
         height: auto;
         max-height: 200px;
-        object-fit: contain;
-    }
-
-    .video-card video {
-        max-height: 200px;
-        object-fit: contain;
-    }
-}
-
-/* 💻 PANTALLAS MEDIANAS (≤ 1024px) */
-@media (max-width: 1024px) {
-    .video-card,
-    .card,
-    .card-venta,
-    .training-card,
-    .gallery-item {
-        width: 90%;
-        margin: auto;
+        object-fit: cover;
     }
 }
 
