@@ -367,6 +367,33 @@ button.next { right: 10px; }
     color: #444;
 }
 
+/* ==== SECCIÓN INFO ==== */
+.info {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.info h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #003366;
+    text-align: center;
+}
+
+.info p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
 /* ==== MEDIA QUERIES ==== */
 @media (max-width: 1024px) {
     .video-card,
@@ -451,6 +478,18 @@ button.next { right: 10px; }
     .video-card video {
         max-height: 200px;
         object-fit: contain;
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+        padding: 0 15px;
+        margin-bottom: 40px;
+    }
+
+    .info .cards {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
