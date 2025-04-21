@@ -509,18 +509,6 @@ nav a:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .info {
-        padding: 0 15px;
-        margin-bottom: 40px;
-    }
-
-    .info .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 /* ==== HEADER OCULTO AL SCROLL ==== */
 
 .hide-header header {
